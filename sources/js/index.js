@@ -1,3 +1,4 @@
+// polyfils for IE11
 import 'core-js/modules/es.array.iterator';
 
 const button = document.getElementById('background');
