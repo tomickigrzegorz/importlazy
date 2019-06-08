@@ -6,10 +6,7 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": "last 2 versions"
-        },
-        "debug": true,
+        // "debug": true,
         "useBuiltIns": "usage",
         "corejs": 3
       }
