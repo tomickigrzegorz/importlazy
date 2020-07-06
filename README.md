@@ -23,3 +23,4 @@ If you want to load a js file, all you have to do is add `data-module="js-module
 ```html
 <button id="background" class="button-primary" data-module="background">change the background</button>
 ```
+In this case, background.js will be dynamically loaded.
