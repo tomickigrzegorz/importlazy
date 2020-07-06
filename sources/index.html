@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lazy Loading</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lazy Loading</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
 
-    body {
-      background: #020024;
-      transition: background 0.2s ease-in;
-    }
+      body {
+        background: #020024;
+        transition: background 0.2s ease-in;
+      }
 
-    .bodyColor {
-      background: #833ab4;
-    }
+      .button-primary {
+        padding: 10px 25px;
+        border-radius: 5px;
+        background: #33C3F0;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+      }
 
-    .bodyColor button {
-      box-shadow: 0px 0px 50px 0px rgba(255, 0, 0, 0.75);
-    }
+      .button-primary:hover {
+        background: #1EAEDB;
+      }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-  </style>
-</head>
+      .bodyColor {
+        background: #833ab4;
+      }
 
-<body>
-  <div class="container">
-    <button id="background" class="button-primary" data-module="background">change the background</button>
-  </div>
-</body>
+      .bodyColor button {
+        box-shadow: 0px 0px 50px 0px rgba(255, 0, 0, 0.75);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      if (!('Promise' in window)) {
+        var script = document.createElement("script");
+        script.src = "https://polyfill.io/v3/polyfill.min.js?features=Promise";
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+    </script>
+    <div class="container">
+      <button id="background" class="button-primary" data-module="background">change the background</button>
+    </div>
+  </body>
 
 </html>
