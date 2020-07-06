@@ -4,7 +4,7 @@ Dynamic import() js file with aync/await
 
 > [Live DEMO](https://tomik23.github.io/importlazy/)
 
-If you want this example to work in IE11, just add it to index.html
+If you want this example to work in IE10, just add it to index.html
 
 ```html
 <script type="text/javascript">
