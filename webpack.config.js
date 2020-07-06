@@ -6,10 +6,10 @@ module.exports = (env, argv) => ({
   devtool: argv.mode === 'production' ? 'none' : 'source-map',
   mode: argv.mode === 'production' ? 'production' : 'development',
   entry: {
-    main: './sources/js/index.js',
+    script: './sources/js/index.js',
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './docs'),
     filename: './[name].[hash].js',
   },
   module: {
