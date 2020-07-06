@@ -7,6 +7,9 @@
         "airbnb-base",
         "prettier"
     ],
+    "plugins": [
+        "prettier"
+    ],
     "parser": "babel-eslint",
     "globals": {
         "Atomics": "readonly",
@@ -17,54 +20,33 @@
         "sourceType": "module"
     },
     "rules": {
-        "linebreak-style": 0,
-        "global-require": 0,
-        "no-restricted-globals": [
+        "prettier/prettier": [
             "error",
-            "event"
-        ],
-        "indent": [
-            2,
-            2
-        ],
-        "array-bracket-spacing": [
-            2,
-            "always"
-        ],
-        "object-curly-spacing": [
-            2,
-            "always"
-        ],
-        "computed-property-spacing": [
-            2,
-            "always"
-        ],
-        "no-multiple-empty-lines": [
-            2,
             {
-                "max": 1,
-                "maxEOF": 0,
-                "maxBOF": 0
+                "endOfLine": "auto"
             }
         ],
+        "require-await": "error",
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "class-methods-use-this": "off",
         "quotes": [
-            2,
-            "single",
-            "avoid-escape"
+            "error",
+            "single"
         ],
-        "no-use-before-define": [
+        "no-param-reassign": [
             2,
             {
-                "functions": false
+                "props": false
             }
         ],
-        "prefer-const": 1,
-        "complexity": [
-            1,
-            5
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
         ]
-    },
-    "plugins": [
-        "prettier"
-    ]
+    }
 }
