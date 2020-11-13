@@ -2,20 +2,32 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-function prodPlugin(plugin, mode) {
+const prodPlugin = (plugin, mode) => {
   return mode === 'development' ? () => { } : plugin;
-}
+};
+
+const configureDevServer = () => {
+  return {
+    contentBase: './sources/js',
+    open: true,
+    port: 3000,
+    inline: true,
+    stats: 'errors-only',
+    hot: true,
+  };
+};
 
 module.exports = (env, { mode }) => {
   const inDev = mode === 'development';
   return {
-    devtool: inDev ? 'eval-source-map' : 'none',
+    devtool: inDev ? 'eval-source-map' : false,
     entry: {
       script: './sources/js/index.js',
     },
+    devServer: inDev ? configureDevServer() : {},
     output: {
       path: path.resolve(__dirname, './docs'),
-      filename: './[name].[contenthash].js',
+      filename: './[name].[hash].js',
     },
     module: {
       rules: [
