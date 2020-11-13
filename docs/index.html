@@ -7,12 +7,12 @@
         background: #020024;
         transition: background 0.2s ease-in;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
       }
 
-      .button-primary {
+      .button {
         padding: 10px 25px;
         border-radius: 5px;
-        background: #33C3F0;
         color: #fff;
         border: 0;
         cursor: pointer;
@@ -20,8 +20,16 @@
         line-height: 100%;
       }
 
-      .button-primary:hover {
-        background: #1EAEDB;
+      .blue {
+        background: #33C3F0;
+      }
+
+      .red {
+        background: #f03333;
+      }
+
+      .button:hover {
+        filter: brightness(0.9)
       }
 
       .bodyColor {
@@ -54,4 +62,4 @@
         var script = document.createElement("script");
         script.src = "https://polyfill.io/v3/polyfill.min.js?features=Promise";
         document.getElementsByTagName('head')[0].appendChild(script);
-      }</script><div class="container"><button class="button-primary" data-module="background">change the background</button></div><script src="./script.6a666ee11aa044715bd7.js"></script></body></html>
+      }</script><div class="container"><h1>TEXT</h1><button class="button blue" data-module="background">change the background</button> <button class="button red" data-module="add-text">change the text</button></div><script src="./script.0a5ea55bf3c7668f8f6f.js"></script></body></html>

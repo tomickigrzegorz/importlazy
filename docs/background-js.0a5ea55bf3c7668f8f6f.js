@@ -1,0 +1,1 @@
+(self.webpackChunkimportlazy=self.webpackChunkimportlazy||[]).push([[639],{574:function(t,o,n){"use strict";function u(){document.body.classList.toggle("bodyColor")}n.r(o),n.d(o,{default:function(){return u}})}}]);

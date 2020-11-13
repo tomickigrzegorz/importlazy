@@ -1,10 +1,11 @@
 const dataModules = document.querySelectorAll('[data-module]');
 
-dataModules.forEach((module) => {
-  module.addEventListener('click', async (event) => {
+
+for (let i = 0; i < dataModules.length; i++) {
+  dataModules[i].addEventListener('click', async (event) => {
     event.preventDefault();
     try {
-      const moduleName = module.getAttribute('data-module');
+      const moduleName = dataModules[i].getAttribute('data-module');
       const background = await import(
         /* webpackChunkName: "[request]" */ `./${moduleName}.js`
       );
@@ -12,5 +13,20 @@ dataModules.forEach((module) => {
     } catch (error) {
       console.error(error);
     }
-  })
-});
+  });
+}
+
+// dataModules.forEach((module) => {
+//   module.addEventListener('click', async (event) => {
+//     event.preventDefault();
+//     try {
+//       const moduleName = module.getAttribute('data-module');
+//       const background = await import(
+//         /* webpackChunkName: "[request]" */ `./${moduleName}.js`
+//       );
+//       background.default();
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   })
+// });
