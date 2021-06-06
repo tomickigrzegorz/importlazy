@@ -1,17 +1,13 @@
-const dataModules = document.querySelectorAll('[data-module]');
-
-
-for (let i = 0; i < dataModules.length; i++) {
-  dataModules[i].addEventListener('click', async (event) => {
-    event.preventDefault();
+document.addEventListener('click', async (event) => {
+  event.preventDefault();
+  if (event.target.dataset.module) {
     try {
-      const moduleName = dataModules[i].getAttribute('data-module');
       const background = await import(
-        /* webpackChunkName: "[request]" */ `./${moduleName}.js`
+        /* webpackChunkName: "[request]" */ `./modules/${event.target.dataset.module}.js`
       );
       background.default();
     } catch (error) {
       console.error(error);
     }
-  });
-}
+  }
+});

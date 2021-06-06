@@ -1,1 +1,0 @@
-(self.webpackChunkimportlazy=self.webpackChunkimportlazy||[]).push([[249],{196:function(t,e,n){"use strict";function u(){var t=document.querySelector("h1"),e=t.textContent;t.textContent="text changed"===e?"TEXT":"text changed"}n.r(e),n.d(e,{default:function(){return u}})}}]);

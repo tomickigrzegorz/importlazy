@@ -8,18 +8,22 @@ const prodPlugin = (plugin, mode) => {
 
 const configureDevServer = () => {
   return {
-    contentBase: './sources/js',
+    contentBase: './sources',
     open: true,
     port: 3000,
-    inline: true,
-    stats: 'errors-only',
+    liveReload: true,
     hot: true,
+    stats: 'errors-only',
+    inline: true,
+    watchContentBase: true,
   };
 };
 
 module.exports = (env, { mode }) => {
   const inDev = mode === 'development';
   return {
+    target: inDev ? 'web' : 'browserslist',
+    mode: inDev ? 'development' : 'production',
     devtool: inDev ? 'eval-source-map' : false,
     entry: {
       script: './sources/js/index.js',
